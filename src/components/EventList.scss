@@ -1,0 +1,62 @@
+.EventListContainer {
+  padding: 2%;
+  background: #fff;
+}
+.nav {
+  background: #052d49;
+  padding: 15px 2%;
+  -moz-box-shadow:    
+                      inset 0px -11px 8px -10px #000;
+  -webkit-box-shadow: 
+                      inset 0px -11px 8px -10px #000;
+  box-shadow:         
+                      inset 0px -11px 8px -10px #000;
+}
+.citySelectContainer {
+  display: inline-block;
+  width: 25%;
+  vertical-align: top;
+}
+img.FilterIcon {
+  max-width: 20px;
+}
+label {
+  color:#FFF;
+}
+select:not(:-internal-list-box) {
+    overflow: visible !important;
+}
+.select {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  background-color: #052d49;
+  border-radius: 0;
+  background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAzODYuMjU3IDM4Ni4yNTciIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDM4Ni4yNTcgMzg2LjI1NzsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSIxNnB4IiBoZWlnaHQ9IjE2cHgiPgo8cG9seWdvbiBwb2ludHM9IjAsOTYuODc5IDE5My4xMjksMjg5LjM3OSAzODYuMjU3LDk2Ljg3OSAiIGZpbGw9IiNGRkZGRkYiLz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==);
+  background-position: 93% center;
+  background-repeat: no-repeat;
+  background-size: 12px 12px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #cccccc;
+  color: #fff;
+  font-family: inherit;
+  font-size: 0.77778rem;
+  line-height: normal;
+  margin: 0;
+  padding: 0.44444rem;
+  border-radius: 0;
+  height: 2.05556rem;
+  width: 100%;
+  font-family: 'Arial', sans-serif;
+}
+.NoResults {
+  text-align: center;
+  padding: 4% 0;
+  color: #10153b;
+  font-family: 'Archivo Narrow', sans-serif;
+  font-weight: 500;
+  font-size: 150%;
+}
+.NoResults img {
+  max-width: 33px;
+}

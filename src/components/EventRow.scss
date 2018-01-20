@@ -1,0 +1,179 @@
+.Event {
+  border-bottom: 1px solid rgba(31,53,78,0.11);
+  padding: 10px 0;
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all 300ms ease-in;
+  -moz-transition: all 300ms ease-in;
+  -o-transition: all 300ms ease-in;
+  transition: all 300ms ease-in;
+}
+.Event:hover {
+	-ms-transform: scale(1.01);
+  -webkit-transform: scale(1.01);
+  transform: scale(1.01);
+  background: #f9f9f9;
+}
+.eventDetail {
+	border-bottom: none;
+	padding-top: 20px;
+	-webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+  background: #fff;
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.eventDetail:hover {
+	border-bottom: none;
+	padding-top: 20px;
+	-webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+  background: #fff;
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+a, a:link, a:visited, a:focus, a:hover, a:active{
+	text-decoration: none !important;
+}
+.EventHeader {
+	clear: both;
+	display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.column {
+	display: block;
+	float: left;
+	flex-grow: 1;
+}
+.clearFix {
+	clear: both;
+}
+.category {
+	width: 8%;
+	text-align: center;
+}
+.categoryIcon {
+	width: 30px;
+	height: 30px;
+	background: #052d49;
+	padding: 6px;
+	border-radius: 50%;
+	text-align: center;
+	display: block;
+	margin: 0 auto 5px;
+}
+.sportsName {
+	max-width: 100%;
+}
+.league {
+	font-size: 80%;
+	padding: 0;
+	margin: 0;
+	font-weight: 500;
+	font-family: 'Archivo Narrow', sans-serif;
+	text-decoration: none;
+	color: #052d49;
+}
+.logo {
+	width: 10%;
+	text-align: center;
+}
+.time {
+	padding-top: 15px;
+	width: 20%;
+	text-align: center;
+	font-weight: 500;
+	font-family: 'Archivo Narrow', sans-serif;
+	color: #000;
+}
+.eventDetailTime {
+	padding-top: 0px;
+	width: 20%;
+	text-align: center;
+	font-weight: 500;
+	font-family: 'Archivo Narrow', sans-serif;
+	color: #000;
+}
+.eventDetailDatetime {
+	font-size: 140%;
+	line-height: 180%;
+	margin-bottom: 5px;
+	display: block;
+}
+.team {
+	width: 28%;
+	text-align: center;
+}
+.TeamLogo {
+	max-width: 40px;
+	display: inline-block;
+	margin: 0 10px 0 0;
+}
+.eventDetailTeamLogo {
+	max-width: 50px;
+	padding-bottom: 10px;
+}
+.Event h2 {
+	margin: 0;
+	padding: 0 0 5px;
+	font-family: 'Archivo Narrow', sans-serif;
+	font-weight: 700;
+	font-size: 160%;
+	font-style: italic;
+	color: #052d49;
+	text-decoration: none;
+}
+.arena {
+	text-align: center;
+	font-family: 'Archivo Narrow', sans-serif;
+	font-size: 90%;
+	padding: 10px 0 0;
+	line-height: 130%;
+}
+.textCenter {
+	text-align:center;
+}
+.browseAllButton {
+  background: url('../img/icons8-back-100.png') no-repeat 7% 48% #2e7d32;
+  background-size: 12px 12px;
+  box-shadow: 0 3px 0 0 #1b5e20;
+  border-radius: 4px;
+  color: #fff !important;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 300;
+  height: 40px;
+  letter-spacing: 0.1em;
+  line-height: 40px;
+  min-width: 100px;
+  opacity: 1;
+  padding: 0 20px 0 35px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  transition: opacity 0.2s ease-out;
+  font-family: 'Archivo Narrow', sans-serif;
+  font-weight: 500;
+  margin: 20px 0;
+  -webkit-transition: all 300ms ease-in;
+  -moz-transition: all 300ms ease-in;
+  -o-transition: all 300ms ease-in;
+  transition: all 300ms ease-in;
+}
+.browseAllButton:hover {
+  background: url('../img/icons8-back-100.png') no-repeat 7% 48% #388e3c;
+  background-size: 12px 12px;
+}
+.browseAllButton:active {
+    box-shadow: none !important;
+    top: 3px !important;
+}

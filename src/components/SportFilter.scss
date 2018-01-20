@@ -1,0 +1,85 @@
+.sportSelect {
+  list-style: none;
+  width: 75%;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  text-align: right;
+  vertical-align: top;
+}
+.checkmark {
+  background: url('../img/icons8-checked-100.png') no-repeat;
+  background-size: 16px 16px;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  bottom: -2px;
+  left: -2px;
+  -ms-transform: scale(0);
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: all 200ms cubic-bezier(0.250, 0.250, 0.750, 0.750); 
+     -moz-transition: all 200ms cubic-bezier(0.250, 0.250, 0.750, 0.750); 
+       -o-transition: all 200ms cubic-bezier(0.250, 0.250, 0.750, 0.750); 
+          transition: all 200ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+
+  -webkit-transition-timing-function: cubic-bezier(0.250, 0.250, 0.750, 0.750); 
+     -moz-transition-timing-function: cubic-bezier(0.250, 0.250, 0.750, 0.750); 
+       -o-transition-timing-function: cubic-bezier(0.250, 0.250, 0.750, 0.750); 
+          transition-timing-function: cubic-bezier(0.250, 0.250, 0.750, 0.750);
+}
+.sportSelectLi {
+  display: inline-block;
+  width: 32px;
+  padding: 0 5px;
+  position: relative;
+}
+.sportSelectLabel {
+  cursor: pointer;
+}
+.sportSelectLabel:active {
+  cursor: pointer;
+}
+.sport {
+  max-width: 100%;
+  padding-top: 5px;
+}
+.sportSelectInput {
+  display: none;
+}
+.sportSelectInput ~img {
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all 400ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+     -moz-transition: all 400ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+       -o-transition: all 400ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+          transition: all 400ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+
+  -webkit-transition-timing-function: cubic-bezier(0.680, 0, 0.265, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+     -moz-transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+       -o-transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+          transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550);
+}
+.sportSelectInput:active ~img {
+  -ms-transform: scale(0.85);
+  -webkit-transform: scale(0.85);
+  transform: scale(0.85);
+}
+.sportSelectInput:checked ~.checkmark {
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+     -moz-transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+       -o-transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+          transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+
+  -webkit-transition-timing-function: cubic-bezier(0.680, 0, 0.265, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+     -moz-transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+       -o-transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+          transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550);
+
+}

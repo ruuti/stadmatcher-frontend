@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Archivo+Narrow:400,400i,500,500i,600,600i,700,700i');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+	background: #10153e;
+}
+.container {
+	width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.AppHeader {
+	background: #FFF;
+	padding: 0 2%;
+	-moz-box-shadow:    0 11px 8px -10px #797979;
+  -webkit-box-shadow: 0 11px 8px -10px #797979;
+  box-shadow:         0 11px 8px -10px #797979;
+  position: relative;
+}
+.AppHeaderContainer {
+  padding: 15px 0 10px;
+}
+.logoContainer {
+	display: block;
+	float: left;
+	width: 40%;
+}
+.AppLogo {
+  max-height: 35px;
+}
+.titleContainer {
+	display: block;
+	float: left;
+	width: 60%;
+}
+.clearFix {
+	clear: both;
+}
+.slogan {
+	margin: 0;
+	padding: 12px 0 0;
+	color: #10153b;
+	font-family: 'Archivo Narrow', sans-serif;
+	font-weight: 500;
+	font-size: 90%;
+	line-height: 120%;
+	text-align: right;
+}
+.footer {
+  margin: 0 auto;
+  padding: 1%;
+  text-align: center;
+}
+.footer p {
+	color:#FFF;
+	padding: 0;
+	font-size: 12px;
+	font-family: 'Arial', sans-serif;
+}
+.footer p a {
+	color: #FF6700;
+	line-height: 2em;
+}
+.text-center {
+	text-align: center;
+}
