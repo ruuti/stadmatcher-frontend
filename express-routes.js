@@ -14,12 +14,17 @@ function generate_xml_sitemap(callback) {
         urls.push('/match/'+json[i].id);
       }
 
-        var priority = 0.5;
-        var freq = 'monthly';
         var xml = '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
         for (var i in urls) {
+            var priority = 0.5;
+            var freq = 'monthly';
+            
             xml += '<url>';
             xml += '<loc>'+ root_path + urls[i] + '</loc>';
+            if(i == 0){
+                freq = 'daily';
+                priority = 0.9;
+            }
             xml += '<changefreq>'+ freq +'</changefreq>';
             xml += '<priority>'+ priority +'</priority>';
             xml += '</url>';

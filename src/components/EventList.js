@@ -68,7 +68,6 @@ class EventList extends Component {
     const selectedSports = this.state.selectedSports;
     const filteredEvents = [];
     if(selectedCity !== 'all') {
-      console.log(selectedCity);
       for (var i = 0; i < this.state.events.length; i++) {
         const eventObj = this.state.events[i];
         if(eventObj['arena']['city'] === selectedCity && selectedSports.indexOf(eventObj.home_team.league.sport.title) > -1){
@@ -76,7 +75,6 @@ class EventList extends Component {
         }
       }
     }else{
-      console.log('not all');
       for (var c = 0; c < this.state.events.length; c++) {
         const eventObj = this.state.events[c];
         if(selectedSports.indexOf(eventObj.home_team.league.sport.title) > -1){

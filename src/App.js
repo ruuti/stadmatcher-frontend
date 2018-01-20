@@ -34,7 +34,7 @@ class App extends Component {
                   <div className="clear-fix"></div>
                 </div>
               </header>
-              <Switch>
+              <Switch onUpdate={this.fireTracking}>
                 <Route exact path='/' component={Events} />
                 <Route path='/match/:matchId' component={Event} />
               </Switch>

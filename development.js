@@ -8,6 +8,9 @@ const webpackHotServerMiddleware = require('webpack-hot-server-middleware');
 const config = require('./webpack.development.config.js');
 const compiler = webpack(config);
 const extressroutes = require('./express-routes');
+const helmet = require('helmet');
+
+app.use(helmet())
 
 app.use('/', extressroutes);
 

@@ -1,16 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
+import { Router } from 'react-router-dom';
 import App from './App';
+import ReactGA from 'react-ga';
+import createHistory from 'history/createBrowserHistory';
 
-// Grab the state from a global variable injected into the server-generated HTML
+ReactGA.initialize('UA-112815429-1');
+if(window){
+	ReactGA.pageview(window.location.pathname + window.location.search);
+}
+
+const history = createHistory();
+const unlisten = history.listen((location, action) => {
+  ReactGA.pageview(location.pathname+location.search);
+});
+
 const preloadedState = window.__PRELOADED_STATE__
-
-// Allow the passed state to be garbage-collected
 delete window.__PRELOADED_STATE__
 
 ReactDOM.render((
-	<BrowserRouter>
+	<Router history={history}>
 		<App preloadedState={preloadedState} />
-	</BrowserRouter>
+	</Router>
 ), document.getElementById('root'));

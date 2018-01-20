@@ -6,11 +6,13 @@ import Template from './template';
 import App from './App';
 import DataSource from './src/DataSource';
 import routes from './src/routes';
+import express from 'express';
+const router = express.Router();
 
 export default function serverRenderer({ clientStats, serverStats }) {
-	return (req, res, next) => {
 
-		const dataSource = new DataSource();
+	router.get(['/', '/match/:matchId'], function(req, res) {
+	  const dataSource = new DataSource();
 		const promises = [];
 
 		routes.some(route => {
@@ -36,5 +38,7 @@ export default function serverRenderer({ clientStats, serverStats }) {
 		      preloadedState : results[0]
 				}));
 			});
-	};
+	});
+
+	return router;
 }

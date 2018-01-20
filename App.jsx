@@ -42,7 +42,8 @@ export default class App extends Component {
 					titleAttributes={{lang: "sv"}}
 					meta={[
 						{name: "description", content: ""},
-						{name: "viewport", content: "width=device-width, initial-scale=1"},
+						{name: "viewport", content: "width=device-width, minimum-scale=1, initial-scale=1, shrink-to-fit=no, user-scalable=no"},
+            {name: "charset", content: "utf-8"}
 					]}
 				/>
         <div className={AppStyles.container}>

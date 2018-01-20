@@ -62,9 +62,9 @@ html, body {
 .AppHeader {
 	background: #FFF;
 	padding: 0 2%;
-	-moz-box-shadow:    0 11px 8px -10px #797979;
-  -webkit-box-shadow: 0 11px 8px -10px #797979;
-  box-shadow:         0 11px 8px -10px #797979;
+	-moz-box-shadow:    0 11px 8px -10px #000;
+  -webkit-box-shadow: 0 11px 8px -10px #000;
+  box-shadow:         0 11px 8px -10px #000;
   position: relative;
 }
 .AppHeaderContainer {
@@ -77,12 +77,27 @@ html, body {
 }
 .AppLogo {
   max-height: 35px;
+  max-width: 100%;
 }
 .titleContainer {
 	display: block;
-	float: left;
+	float: right;
 	width: 60%;
 }
+
+@media screen and (max-width: 480px) {
+    .logoContainer {
+        width: 50%;
+    }
+    .titleContainer {
+    	width: 50%;
+    	h1 {
+    		padding: 0 0 0 10px;
+    		display: none;
+    	}
+    }
+}
+
 .clearFix {
 	clear: both;
 }

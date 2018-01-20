@@ -82,6 +82,11 @@ a, a:link, a:visited, a:focus, a:hover, a:active{
 	text-decoration: none;
 	color: #052d49;
 }
+@media screen and (max-width: 480px) {
+	.league {
+		font-size: 60%;
+	}
+}
 .logo {
 	width: 10%;
 	text-align: center;
@@ -109,13 +114,14 @@ a, a:link, a:visited, a:focus, a:hover, a:active{
 	display: block;
 }
 .team {
-	width: 28%;
+	width: 24%;
+	padding: 0 2%;
 	text-align: center;
 }
 .TeamLogo {
 	max-width: 40px;
 	display: inline-block;
-	margin: 0 10px 0 0;
+	margin: 0;
 }
 .eventDetailTeamLogo {
 	max-width: 50px;
@@ -130,6 +136,7 @@ a, a:link, a:visited, a:focus, a:hover, a:active{
 	font-style: italic;
 	color: #052d49;
 	text-decoration: none;
+	word-wrap:break-word;
 }
 .arena {
 	text-align: center;
@@ -137,6 +144,14 @@ a, a:link, a:visited, a:focus, a:hover, a:active{
 	font-size: 90%;
 	padding: 10px 0 0;
 	line-height: 130%;
+}
+@media screen and (max-width: 480px) {
+	.Event h2 {
+		font-size: 110%;
+	}
+	.arena {
+		font-size: 80%;
+	}
 }
 .textCenter {
 	text-align:center;
