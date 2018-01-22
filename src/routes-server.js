@@ -7,6 +7,7 @@ const dataSource = new DataSourceLocal();
 const routes = [
   { path: '/',
     component: Events,
+    exact: true,
     loadData: () => dataSource.getInitialdata(),
   },
   { path: '/match/:matchId',

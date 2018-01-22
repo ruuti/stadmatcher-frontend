@@ -37,7 +37,7 @@ class EventRow extends Component {
     const event = this.event;
     return (
       <article itemScope itemType={'http://schema.org/SportsEvent'} className={EventRowStyles.Event}>
-        <header className={EventRowStyles.EventHeader}>
+        <header className={EventRowStyles.EventHeader} itemProp={'name'} content={event.home_team.title+' - '+event.away_team.title}>
           <div className={EventRowStyles.category+ ' ' +EventRowStyles.column}>
             <div className={EventRowStyles.categoryIcon}>
               {this.sportIcon(event)}
@@ -54,7 +54,7 @@ class EventRow extends Component {
                 {event.datetime}
               </Moment>
             </time>
-            <p className={EventRowStyles.arena}> {event.arena.title}, {event.arena.city}</p>
+            <p className={EventRowStyles.arena} itemProp={'location'} itemScope itemType={'http://schema.org/Place'}> <span itemProp={'name'}>{event.arena.title}</span>, <span itemProp={'address'} itemScope itemType={'http://schema.org/PostalAddress'}><span itemProp={'addressRegion'}>{event.arena.city}</span></span></p>
           </div>
           <div className={EventRowStyles.team+ ' ' +EventRowStyles.column}>
             { this.teamLogo(event.away_team) }
