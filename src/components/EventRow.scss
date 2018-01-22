@@ -143,9 +143,28 @@ a, a:link, a:visited, a:focus, a:hover, a:active{
 	display: inline-block;
 	margin: 0;
 }
+.TeamLogoEmpty {
+	background-image: url('../img/team-empty.png');
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: 40px 40px;
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+}
 .eventDetailTeamLogo {
 	max-width: 50px;
 	padding-bottom: 10px;
+}
+.eventDetailTeamLogoEmpty {
+	background-image: url('../img/team-empty.png');
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: 50px 50px;
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	margin-bottom: 10px;
 }
 .Event h2 {
 	margin: 0;

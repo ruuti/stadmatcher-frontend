@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Moment from 'react-moment';
 import EventRowStyles from './EventRow.scss';
-import emptyTeamLogo from '../img/team-empty.png';
 
 class EventRow extends Component {
 
@@ -12,7 +11,7 @@ class EventRow extends Component {
 
   teamLogo(team) {
     
-    let image = <img className={EventRowStyles.TeamLogo} alt={team.title} src={emptyTeamLogo} />
+    let image = <div className={EventRowStyles.TeamLogoEmpty}></div>
     if(team.logo) {
       image = <img className={EventRowStyles.TeamLogo} alt={team.title} src={team.logo} />
     }

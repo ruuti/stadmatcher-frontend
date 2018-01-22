@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
 import Moment from 'react-moment';
 import EventRowStyles from './EventRow.scss';
-import hockeyIcon from '../img/icons8-hockey-100-white.png';
-import basketballIcon from '../img/icons8-basketball-100.png';
-import bandyIcon from '../img/bandy.png';
-import soccerIcon from '../img/icons8-soccer-ball-100.png';
-import emptyTeamLogo from '../img/team-empty.png';
 import {
   Link
 } from 'react-router-dom';
@@ -19,22 +14,9 @@ class EventDetailRow extends Component {
 
   teamLogo(team) {
     
-    let image = <img className={EventRowStyles.eventDetailTeamLogo} alt={team.title} src={emptyTeamLogo} />
+    let image = <div className={EventRowStyles.eventDetailTeamLogoEmpty}></div>
     if(team.logo) {
       image = <img className={EventRowStyles.eventDetailTeamLogo} alt={team.title} src={team.logo} />
-    }
-    return image
-  }
-
-  sportIcon(event) {
-    let image = <img className={EventRowStyles.sportsName} alt="Ice hockey" src={hockeyIcon} />
-    const sport = event.home_team.league.sport;
-    if(sport.id === 1){
-      image = <img className={EventRowStyles.sportsName} alt="Ice hockey" src={hockeyIcon} />
-    } else if(sport.id === 3){
-      image = <img className={EventRowStyles.sportsName} alt="Bandy" src={bandyIcon} />
-    } else if(sport.id === 4){
-      image = <img className={EventRowStyles.sportsName} alt="Basketball" src={basketballIcon} />
     }
     return image
   }
