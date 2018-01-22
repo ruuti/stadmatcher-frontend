@@ -14,6 +14,7 @@ app.use(helmet());
 app.use('/', extressroutes);
 
 app.use('/static', express.static(path.join(__dirname, './static')));
+app.use('/', express.static(path.join(__dirname, './public_www')));
 
 app.use(ServerRenderer(Stats));
 

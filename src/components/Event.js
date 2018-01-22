@@ -5,6 +5,7 @@ import moment from 'moment';
 import Config from '../Config';
 import Helmet from 'react-helmet';
 import DataSource from '../DataSource';
+import EventListStyles from './EventList.scss';
 
 class Event extends Component {
 
@@ -60,12 +61,23 @@ class Event extends Component {
       content = <EventDetailRow event={this.state.event} />
     }
 
-    let helmetData = <Helmet title={this.state.title} />;
+    let helmetData = (<Helmet 
+      title={this.state.title} 
+      meta={[
+        {property: "og:title", content: this.state.title},
+        {name: "twitter:title", content: this.state.title},
+        {property: "og:url", content: 'https://stadmatcher.se/match/'+this.props.match.params.matchId},
+        {property: "og:description", content: "Ishockey, bandy, fotboll, basketboll matcher i Sverige"},
+        {name: "twitter:description", content: "Ishockey, bandy, fotboll, basketboll matcher i Sverige"}
+      ]}
+      link={[
+        {rel:"canonical", href: "https://stadmatcher.se/match/"+this.props.match.params.matchId}
+      ]} />);
 
     return (
       <div>
         { helmetData }
-        <section className="EventListContainer">
+        <section className={ EventListStyles.EventListContainer }>
           {content}
         </section>
       </div>

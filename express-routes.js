@@ -38,7 +38,7 @@ function generate_xml_sitemap(callback) {
 
 router.get('/robots.txt', function(req, res) {
    res.type('text/plain')
-    res.send("User-agent: *\nDisallow: ");
+    res.send("User-agent: *\nDisallow: \n\nSitemap: https://stadmatcher.se/sitemap.xml");
 })
 
 // /sitemap.xml

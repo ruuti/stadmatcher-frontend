@@ -99,7 +99,7 @@ class EventList extends Component {
     if(filteredEvents.length === 0  && !loading){
       return (<div className={EventListStyles.NoResults}>
         <img src={noResultIcon} alt="No upcoming events" />
-        <p>No upcoming events. <br/>Select different sports or city!</p>
+        <p>Inga kommande event hittades.<br/>Välj en annan stad eller sport.</p>
         </div>);
     }else{
       return;
@@ -147,9 +147,9 @@ class EventList extends Component {
 
           {this.state.filteredEvents.map((x, i) => {
             if(i === 0 || moment(this.state.filteredEvents[i-1].datetime).format('YYYY-MM-DD') !== moment(x.datetime).format('YYYY-MM-DD')){
-              return <div key={x.id}><DateHeader date={x.datetime} /><Link to={{ pathname: '/match/'+x.id }}><EventRow event={x} /></Link></div>;
+              return <div key={x.id}><DateHeader date={x.datetime} /><Link title={x.home_team.title+' - '+x.away_team.title + ' '+moment(x.datetime).format('YYYY-MM-DD')+', '+x.arena.title+', '+x.arena.city} to={{ pathname: '/match/'+x.id }}><EventRow event={x} /></Link></div>;
             }else{
-              return <Link key={x.id} to={{ pathname: '/match/'+x.id }}><EventRow event={x} /></Link>;
+              return <Link title={x.home_team.title+' - '+x.away_team.title + ' '+moment(x.datetime).format('YYYY-MM-DD')+', '+x.arena.title+', '+x.arena.city} to={{ pathname: '/match/'+x.id }}><EventRow event={x} /></Link>;
             }
           })}
           { this.noResults(this.state.filteredEvents, this.state.loading) }

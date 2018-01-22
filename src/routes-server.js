@@ -1,8 +1,8 @@
 import Events from './components/Events';
 import Event from './components/Event';
-import DataSource from './DataSource';
+import DataSourceLocal from './DataSourceLocal';
 
-const dataSource = new DataSource();
+const dataSource = new DataSourceLocal();
 
 const routes = [
   { path: '/',

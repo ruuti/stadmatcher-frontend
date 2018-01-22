@@ -4,15 +4,13 @@ import { StaticRouter, matchPath } from 'react-router-dom';
 import {Helmet} from "react-helmet";
 import Template from './template';
 import App from './App';
-import DataSource from './src/DataSource';
-import routes from './src/routes';
+import routes from './src/routes-server';
 import express from 'express';
 const router = express.Router();
 
 export default function serverRenderer({ clientStats, serverStats }) {
 
 	router.get(['/', '/match/:matchId'], function(req, res) {
-	  const dataSource = new DataSource();
 		const promises = [];
 
 		routes.some(route => {

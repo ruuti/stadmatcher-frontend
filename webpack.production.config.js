@@ -5,6 +5,7 @@ const WebpackCleanupPlugin = require('webpack-cleanup-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const StatsPlugin = require('stats-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = [
 	{
@@ -145,6 +146,12 @@ module.exports = [
 				chunks: true,
 				exclude: [/node_modules[\\\/]react/],
 			}),
+			new CopyWebpackPlugin([
+				{
+					from: path.resolve(__dirname, './favicons'),
+					to: path.resolve(__dirname, './public_www'),
+				},
+			])
 		]
 	}
 ];

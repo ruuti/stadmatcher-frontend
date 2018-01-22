@@ -24,16 +24,16 @@ class EventRow extends Component {
   }
 
   sportIcon(event) {
-    let image = <img className={EventRowStyles.sportsName} alt="Ice hockey" src={hockeyIcon} />
+    let image = <img className={EventRowStyles.sportsName} alt="Ishockey" src={hockeyIcon} />
     const sport = event.home_team.league.sport;
     if(sport.id === 1){
-      image = <img className={EventRowStyles.sportsName} alt="Ice hockey" src={hockeyIcon} />
+      image = <img className={EventRowStyles.sportsName} alt="Ishockey" src={hockeyIcon} />
     } else if(sport.id === 2){
       image = <img className={EventRowStyles.sportsName} alt="Bandy" src={bandyIcon} />
     } else if(sport.id === 3){
-      image = <img className={EventRowStyles.sportsName} alt="Basketball" src={basketballIcon} />
+      image = <img className={EventRowStyles.sportsName} alt="Basketboll" src={basketballIcon} />
     } else if(sport.id === 4){
-      image = <img className={EventRowStyles.sportsName} alt="Soccer" src={soccerIcon} />
+      image = <img className={EventRowStyles.sportsName} alt="Fotboll" src={soccerIcon} />
     }
     return image
   }

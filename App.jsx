@@ -5,6 +5,8 @@ import Events from './src/components/Events';
 import Event from './src/components/Event';
 import AppStyles from './src/App.scss';
 import logoImg from './src/img/logo.png';
+import SomeCoverImg from './src/img/somecover.png';
+import TwitterCardImg from './src/img/twitter-card.png';
 
 export default class App extends Component {
 
@@ -41,10 +43,24 @@ export default class App extends Component {
 					titleTemplate="%s | Stadmatcher.se"
 					titleAttributes={{lang: "sv"}}
 					meta={[
-						{name: "description", content: ""},
+						{name: "description", content: "Bläddra bland sportevenemang i Sverige"},
 						{name: "viewport", content: "width=device-width, minimum-scale=1, initial-scale=1, shrink-to-fit=no, user-scalable=no"},
-            {name: "charset", content: "utf-8"}
+            {name: "charset", content: "utf-8"},
+            {property: "og:image", content: 'https://stadmatcher.se'+SomeCoverImg},
+            {name: "twitter:image", content: 'https://stadmatcher.se'+TwitterCardImg},
+            {name: "og:type", content: "website"},
+            {name: "twitter:card", content: "summary"},
+            {name:"theme-color", content:"#011249"},
+            {name: "og:site_name", content:"Stadmatcher.se"},
+            {name: "og:locale", content: "sv_SE"}
 					]}
+          link={[
+            {rel:'apple-touch-icon', sizes: '180x180', href:'/apple-touch-icon.png'},
+            {rel:"icon", type:"image/png", sizes:"32x32", href:"/favicon-32x32.png"},
+            {rel:"icon", type:"image/png", sizes:"16x16", href:"/favicon-16x16.png"},
+            {rel:"manifest", href:"/manifest.json"},
+            {rel:"mask-icon", href:"/safari-pinned-tab.svg", color:"#011249"}
+          ]}
 				/>
         <div className={AppStyles.container}>
           <header className={AppStyles.AppHeader}>

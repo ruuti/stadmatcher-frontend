@@ -14,6 +14,16 @@ class Events extends Component {
       <div>
         <Helmet
           title="Ishockey, bandy, fotboll, basketboll matcher i Sverige"
+          meta={[
+            {property: "og:title", content: "Ishockey, bandy, fotboll, basketboll matcher i Sverige"},
+            {name: "twitter:title", content: "Ishockey, bandy, fotboll, basketboll matcher i Sverige"},
+            {property: "og:description", content: "Bläddra bland sportevenemang i Sverige"},
+            {name: "twitter:description", content: "Bläddra bland sportevenemang i Sverige"},
+            {property: "og:url", content: 'https://stadmatcher.se'}
+          ]}
+          link={[
+            {rel:"canonical", href: "https://stadmatcher.se"}
+          ]}
         />
         <EventList events={events} cities={cities} />
       </div>
