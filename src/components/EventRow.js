@@ -41,7 +41,7 @@ class EventRow extends Component {
   render() {
     const event = this.event;
     return (
-      <article className={EventRowStyles.Event}>
+      <article itemScope itemType={'http://schema.org/SportsEvent'} className={EventRowStyles.Event}>
         <header className={EventRowStyles.EventHeader}>
           <div className={EventRowStyles.category+ ' ' +EventRowStyles.column}>
             <div className={EventRowStyles.categoryIcon}>
@@ -51,10 +51,10 @@ class EventRow extends Component {
           </div>
           <div className={EventRowStyles.team+ ' ' +EventRowStyles.column}>
             { this.teamLogo(event.home_team) }
-            <h2>{event.home_team.title}</h2>
+            <h2 itemProp={'homeTeam'}>{event.home_team.title}</h2>
           </div>
           <div className={EventRowStyles.time+ ' ' +EventRowStyles.column}>
-            <time dateTime="{event.datetime}">
+            <time dateTime={event.datetime} itemProp={'startDate'} content={event.datetime}>
               <Moment format="HH:mm">
                 {event.datetime}
               </Moment>
@@ -63,7 +63,7 @@ class EventRow extends Component {
           </div>
           <div className={EventRowStyles.team+ ' ' +EventRowStyles.column}>
             { this.teamLogo(event.away_team) }
-            <h2>{event.away_team.title}</h2>
+            <h2 itemProp={'awayTeam'}>{event.away_team.title}</h2>
           </div>
           <div className={EventRowStyles.clearFix}></div>
         </header>

@@ -149,7 +149,7 @@ class EventList extends Component {
             if(i === 0 || moment(this.state.filteredEvents[i-1].datetime).format('YYYY-MM-DD') !== moment(x.datetime).format('YYYY-MM-DD')){
               return <div key={x.id}><DateHeader date={x.datetime} /><Link title={x.home_team.title+' - '+x.away_team.title + ' '+moment(x.datetime).format('YYYY-MM-DD')+', '+x.arena.title+', '+x.arena.city} to={{ pathname: '/match/'+x.id }}><EventRow event={x} /></Link></div>;
             }else{
-              return <Link title={x.home_team.title+' - '+x.away_team.title + ' '+moment(x.datetime).format('YYYY-MM-DD')+', '+x.arena.title+', '+x.arena.city} to={{ pathname: '/match/'+x.id }}><EventRow event={x} /></Link>;
+              return <Link key={x.id} title={x.home_team.title+' - '+x.away_team.title + ' '+moment(x.datetime).format('YYYY-MM-DD')+', '+x.arena.title+', '+x.arena.city} to={{ pathname: '/match/'+x.id }}><EventRow event={x} /></Link>;
             }
           })}
           { this.noResults(this.state.filteredEvents, this.state.loading) }
