@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import Moment from 'react-moment';
 import EventRowStyles from './EventRow.scss';
-import hockeyIcon from '../img/icons8-hockey-100-white.png';
-import basketballIcon from '../img/icons8-basketball-100.png';
-import bandyIcon from '../img/bandy.png';
-import soccerIcon from '../img/icons8-soccer-ball-100.png';
 import emptyTeamLogo from '../img/team-empty.png';
 
 class EventRow extends Component {
@@ -24,16 +20,16 @@ class EventRow extends Component {
   }
 
   sportIcon(event) {
-    let image = <img className={EventRowStyles.sportsName} alt="Ishockey" src={hockeyIcon} />
+    let image = <div className={EventRowStyles.sportsName + ' ' +EventRowStyles.icehockey +' '+EventRowStyles.sportNameIcon}></div>
     const sport = event.home_team.league.sport;
     if(sport.id === 1){
-      image = <img className={EventRowStyles.sportsName} alt="Ishockey" src={hockeyIcon} />
+      image = <div className={EventRowStyles.sportsName + ' ' +EventRowStyles.icehockey +' '+EventRowStyles.sportNameIcon}></div>
     } else if(sport.id === 2){
-      image = <img className={EventRowStyles.sportsName} alt="Bandy" src={bandyIcon} />
+      image = <div className={EventRowStyles.sportsName + ' ' +EventRowStyles.bandy +' '+EventRowStyles.sportNameIcon}></div>
     } else if(sport.id === 3){
-      image = <img className={EventRowStyles.sportsName} alt="Basketboll" src={basketballIcon} />
+      image = <div className={EventRowStyles.sportsName + ' ' +EventRowStyles.basketball +' '+EventRowStyles.sportNameIcon}></div>
     } else if(sport.id === 4){
-      image = <img className={EventRowStyles.sportsName} alt="Fotboll" src={soccerIcon} />
+      image = <div className={EventRowStyles.sportsName + ' ' +EventRowStyles.soccer +' '+EventRowStyles.sportNameIcon}></div>
     }
     return image
   }

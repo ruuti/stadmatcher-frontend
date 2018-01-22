@@ -73,6 +73,26 @@ a, a:link, a:visited, a:focus, a:hover, a:active{
 .sportsName {
 	max-width: 100%;
 }
+.sportNameIcon {
+	width:18px;
+	height: 18px;
+	display: block;
+	background-size: 18px 18px;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+.basketball {
+	background-image: url('../img/icons8-basketball-100.png');
+}
+.icehockey {
+	background-image: url('../img/icons8-hockey-100-white.png');
+}
+.bandy {
+	background-image: url('../img/bandy.png');
+}
+.soccer {
+	background-image: url('../img/icons8-soccer-ball-100.png');
+}
 .league {
 	font-size: 80%;
 	padding: 0;
