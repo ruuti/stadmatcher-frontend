@@ -42,14 +42,14 @@ class EventDetailRow extends Component {
   render() {
     const event = this.event;
     return (
-      <article className={EventRowStyles.Event+ ' '+EventRowStyles.eventDetail}>
+      <article itemScope itemType={'http://schema.org/SportsEvent'} className={EventRowStyles.Event+ ' '+EventRowStyles.eventDetail}>
         <header className={EventRowStyles.EventHeader}>
           <div className={EventRowStyles.column+ ' '+EventRowStyles.team}>
             { this.teamLogo(event.home_team) }
-            <h2>{event.home_team.title}</h2>
+            <h2 itemprop={'homeTeam'}>{event.home_team.title}</h2>
           </div>
           <div className={EventRowStyles.column+ ' '+EventRowStyles.eventDetailTime}>
-            <time dateTime="{event.datetime}">
+            <time dateTime="{event.datetime}" itemProp={'startDate'} content={event.datetime}>
               <Moment className={EventRowStyles.eventDetailDatetime} locale="sv" format="MMMM DD YYYY">
                 {event.datetime}
               </Moment>
@@ -61,7 +61,7 @@ class EventDetailRow extends Component {
           </div>
           <div className={EventRowStyles.column+ ' '+EventRowStyles.team}>
             { this.teamLogo(event.away_team) }
-            <h2>{event.away_team.title}</h2>
+            <h2 itemprop={'awayTeam'}>{event.away_team.title}</h2>
           </div>
           <div className={EventRowStyles.clearFix}></div>
         </header>
