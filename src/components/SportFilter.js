@@ -4,6 +4,7 @@ import hockeyIcon from '../img/icons8-hockey-100-white.png';
 import basketballIcon from '../img/icons8-basketball-100.png';
 import bandyIcon from '../img/bandy.png';
 import soccerIcon from '../img/icons8-soccer-ball-100.png';
+import handballIcon from '../img/icons8-handball-filled-100.png';
 
 class SportFilter extends Component {
   constructor(props) {
@@ -29,6 +30,9 @@ class SportFilter extends Component {
         break;
       case 'Soccer':
         sportIcon = <img alt={sport} title={sport} className={SportFilterStyles.sport} src={soccerIcon} />;
+        break;
+      case 'Handball':
+        sportIcon = <img alt={sport} title={sport} className={SportFilterStyles.sport} src={handballIcon} />;
         break;
       default:
         sportIcon = <img alt={sport} title={sport} className={SportFilterStyles.sport} src={hockeyIcon} />;

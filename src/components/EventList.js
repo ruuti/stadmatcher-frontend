@@ -13,7 +13,7 @@ class EventList extends Component {
 
   constructor(props) {
     super(props);
-    this.sports = ['Ice hockey', 'Bandy', 'Soccer', 'Basketball'];
+    this.sports = ['Ice hockey', 'Bandy', 'Soccer', 'Basketball', 'Handball'];
     if(props.events.length === 0){
       this.state = {
         events : props.events,

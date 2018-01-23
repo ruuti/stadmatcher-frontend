@@ -66,7 +66,7 @@ export default class App extends Component {
           <header className={AppStyles.AppHeader}>
             <div className={AppStyles.AppHeaderContainer}>
               <div className={AppStyles.logoContainer}>
-                <Link to='/'>
+                <Link to='/' title={'Stadmatcher.se'}>
                   <img src={logoImg} className={AppStyles.AppLogo} alt="logo" />
                 </Link>
               </div>

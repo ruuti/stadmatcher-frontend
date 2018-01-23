@@ -12,7 +12,7 @@ export default class DataSource {
       return response.json();
     },
     error => {
-      alert(error);
+      console.log(error);
     })
     .then(json => {return json})
   }

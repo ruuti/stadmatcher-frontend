@@ -29,6 +29,8 @@ class EventRow extends Component {
       image = <div className={EventRowStyles.sportsName + ' ' +EventRowStyles.basketball +' '+EventRowStyles.sportNameIcon}></div>
     } else if(sport.id === 4){
       image = <div className={EventRowStyles.sportsName + ' ' +EventRowStyles.soccer +' '+EventRowStyles.sportNameIcon}></div>
+    } else if(sport.id === 5){
+      image = <div className={EventRowStyles.sportsName + ' ' +EventRowStyles.handball +' '+EventRowStyles.sportNameIcon}></div>
     }
     return image
   }
