@@ -39,7 +39,7 @@ export default class App extends Component {
     return (
       <div>
       	<Helmet
-					htmlAttributes={{lang: "sv", amp: undefined}}
+					htmlAttributes={{lang: "sv"}}
 					titleTemplate="%s | Stadmatcher.se"
 					titleAttributes={{lang: "sv"}}
 					meta={[
