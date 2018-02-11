@@ -13,7 +13,7 @@ class Events extends Component {
     return (
       <div>
         <Helmet
-          title="Ishockey, bandy, fotboll, basketboll matcher i Sverige"
+          title="Bläddra bland sportevenemang i Sverige"
           meta={[
             {property: "og:title", content: "Ishockey, bandy, fotboll, basketboll matcher i Sverige"},
             {name: "twitter:title", content: "Ishockey, bandy, fotboll, basketboll matcher i Sverige"},

@@ -5,10 +5,6 @@ import DataSource from './DataSource';
 const dataSource = new DataSource();
 
 const routes = [
-  { path: '/',
-    component: Events,
-    loadData: () => dataSource.getInitialdata(),
-  },
   { path: '/match/:matchId',
     component: Event,
     loadData: (match) => {
@@ -16,6 +12,10 @@ const routes = [
     		return {'event' : data};
     	})
     }
+  },
+  { path: '/',
+    component: Events,
+    loadData: () => dataSource.getInitialdata(),
   }
 ]
 export default routes;

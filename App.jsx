@@ -43,7 +43,7 @@ export default class App extends Component {
 					titleTemplate="%s | Stadmatcher.se"
 					titleAttributes={{lang: "sv"}}
 					meta={[
-						{name: "description", content: "Bläddra bland sportevenemang i Sverige"},
+						{name: "description", content: "Ishockey, bandy, fotboll, basketboll, handboll och volleyboll matcher i Sverige"},
 						{name: "viewport", content: "width=device-width, minimum-scale=1, initial-scale=1, shrink-to-fit=no, user-scalable=no"},
             {name: "charset", content: "utf-8"},
             {property: "og:image", content: 'https://stadmatcher.se'+SomeCoverImg},

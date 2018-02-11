@@ -8,6 +8,7 @@ import SportFilter from './SportFilter';
 import noResultIcon from '../img/icons8-delete-100.png';
 import { Link } from 'react-router-dom';
 import DataSource from '../DataSource';
+import ReactGA from 'react-ga';
 
 class EventList extends Component {
 
@@ -60,6 +61,11 @@ class EventList extends Component {
   handleCityChange(event) {
     this.setState({selectedCity: event.target.value}, function() {
       this.filterEvents();
+      ReactGA.event({
+        category: 'Filter',
+        action: 'Filter by city',
+        label: this.state.selectedCity
+      });
     })
   }
 
